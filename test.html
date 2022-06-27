@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST WORK</title>
+    <style>
+        #register-form {
+            width: 300px;
+            background-color: aliceblue;
+            padding: 24px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input-item {
+            width: 100%;
+        }
+
+        #terms-check {
+            margin: top 14px;
+            margin-bottom: 18px;
+        }
+    </style>
+    <script>
+        function validate(){
+            if(document.myform.name=""){
+                alert("Please provide your name!");
+                // document.myform.name.focus();
+                return false;
+            }
+            // return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h3 style="text-align: center;"><b><i>PERSONAL DETAILS</i></b></h3>
+    <form id="register-form" name="myform" method="post" onsubmit="return(validate())">
+
+        <label><b>USERNAME :</b></label><br /><input class="input-item" name="name" /><br />
+
+        <br><label><b>EMAIL :</b></label><br /><input class="input-item" type="text" name="email"><br />
+
+        <br /> <label><b><i>PASSWORD :</i></b></label><br /><input class="input-item" name="password"
+            type="password" /><br />
+
+        <br><label><b><i>COMFIRM PASSWORD :</i></b></label><br /><input class="input-item" name="password"
+            type="password" /><br />
+
+        <br><label><b>TELEPHONE📱:</b></label><br /><input type="tel" /><br />
+
+        <br><label><b>ID NUMBER :</b></label><input class="input-item" type="number" /><br />
+
+        <br><label><b>ID TYPE :</b></label>
+        <select name="ID" id="Cards">
+            <option value="National Card">National ID Card</option>
+            <option value="Voters Card">Voters ID Card</option>
+            <option value="National Passport">National Passport</option>
+        </select>
+        <br />
+
+        <br><b><label><b>GENDER :</b></label>
+            <br /><b>MALE 👨</b><input type="radio" name="gender" value="MALE" /> <b>FEMALE 👩</b><input type="radio"
+                name="gender" value="Female" /> <b>OTHER Ώ</b><input type="radio" name="gender" value="Other" />
+            <br />
+            <br><label><b>AGE :</b></label><br /><input type="number" name="AGE" /><br />
+
+            <br><label><b>SECURITY QUESTION :</b></label><br>
+            <select class="input-item" name="security-question">
+                <option value="first-review">What Do think abt me{Profile}?</option>
+                <option value="second-review">Would u like to see me inperson?</option>
+                <option value="third-review">What's your favorite musician?</option>
+                <option value="forth-review">Fufuo or KFC?</option>
+            </select>
+            <br><textarea class="input-item" name="answer" rows="6" cols="30"></textarea><br />
+
+            <input id="terms-check" type="checkbox" name="terms and conditions" value="accept"><i>I agree to accept
+                terms and conditions.</i> <br />
+
+            <input type="submit" value="submit" />
+
+    </form>
+</body>
+
+</html>
+
+
